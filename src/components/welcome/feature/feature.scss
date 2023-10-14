@@ -1,0 +1,96 @@
+@use "../../../common/scss" as *;
+
+.feature {
+  padding: 4% 12%;
+  border-bottom: 8px solid #262525;
+  &:first-child {
+    border-top: 8px solid #262525;
+  }
+  .feature-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .text {
+      flex-basis: 50%;
+      h1 {
+        font-size: 55px !important;
+        font-weight: 900 !important;
+      }
+      h2 {
+        margin-top: 30px !important;
+        font-size: 26px !important;
+        font-weight: 600 !important;
+      }
+    }
+    .media {
+      position: relative;
+      flex-basis: 50%;
+      img {
+        width: 100%;
+        margin: auto;
+      }
+      .download-block {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 50%;
+        bottom: 8%;
+        width: 50%;
+        padding: 10px 14px;
+        transform: translateX(-50%);
+        border: 3px solid rgba(128, 128, 128, 0.7);
+        box-shadow: 0 0 2em 0 rgb(0, 0, 0);
+        border-radius: 15px;
+        background: $black;
+        img {
+          width: 57px;
+          object-fit: cover;
+          margin-right: 15px;
+          flex-shrink: 0;
+          flex-grow: 0;
+        }
+        .download-text {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          flex-grow: 0;
+          .movie-title {
+            font-weight: 600 !important;
+          }
+          .download-status {
+            color: $linkColor !important;
+            font-size: 14px !important;
+          }
+        }
+        .video {
+          width: 48px;
+          height: 60px;
+          flex-shrink: 0;
+          flex-grow: 0;
+          outline: 2px solid rgb(0, 0, 0);
+          outline-offset: -2px;
+          display: block;
+          background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif)
+            center center no-repeat;
+          background-size: 100%;
+        }
+      }
+      .feature-video {
+        z-index: -1;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        max-width: 73%;
+        max-height: 54%;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}

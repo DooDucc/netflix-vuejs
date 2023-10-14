@@ -1,0 +1,37 @@
+@use "./variables" as *;
+
+$btnSizes: (
+  "sm": 32,
+  "xl": 56,
+);
+
+@mixin btn($size) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $mainColor;
+  color: $white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  @if ($size == "sm") {
+    padding: 4px 16px;
+    font-size: 16px;
+  }
+  @if ($size == "xl") {
+    padding: 12px 24px;
+    font-size: 24px;
+  }
+  &:hover {
+    background-color: $btnHoverColor;
+  }
+}
+
+@each $key, $value in $btnSizes {
+  .btn-#{$key} {
+    height: $value + px;
+    @include btn($key);
+  }
+}

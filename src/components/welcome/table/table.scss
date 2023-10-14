@@ -1,0 +1,51 @@
+@use "../../../common/scss/variables" as *;
+
+.welcome-questions {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  .questions {
+    list-style: none;
+    margin-bottom: 50px;
+    li {
+      margin-bottom: 10px;
+      .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 25px;
+        background-color: rgb(45, 45, 45);
+        user-select: none;
+        cursor: pointer;
+        h3 {
+          font-size: 30px !important;
+        }
+        .question-icon {
+          transform: rotate(45deg);
+          transition: all 0.3s ease;
+          &.active {
+            transform: rotate(90deg);
+          }
+        }
+        &:hover {
+          background-color: rgb(65, 65, 65);
+        }
+      }
+      .content {
+        margin-top: 2px;
+        max-height: 0;
+        padding: 0 25px;
+        background-color: rgb(45, 45, 45);
+        visibility: hidden;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        &.active {
+          max-height: 300px;
+          padding: 25px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

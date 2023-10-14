@@ -1,0 +1,38 @@
+@use "../../common/scss" as *;
+
+.welcome {
+  .section-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("https://assets.nflxext.com/ffe/siteui/vlv3/893a42ad-6a39-43c2-bbc1-a951ec64ed6d/055cb529-2e26-46b8-abbd-7ce89fba56c1/VN-en-20231002-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    .content {
+      position: absolute;
+      width: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      h1 {
+        font-size: 48px !important;
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+  .section-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 6% 12%;
+    border-bottom: 8px solid #262525;
+    h1 {
+      font-size: 55px !important;
+      font-weight: 900 !important;
+    }
+  }
+}
